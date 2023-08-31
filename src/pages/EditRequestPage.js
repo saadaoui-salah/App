@@ -107,7 +107,7 @@ function EditRequestPage({report, route, parentReport, policy, session}) {
                         Navigation.dismissModal();
                         return;
                     }
-                    editMoneyRequest({comment: transactionChanges.comment.trim()});
+                    editMoneyRequest({comment: transactionChanges.comment.replace('"', '&quot;').trim()});
                 }}
             />
         );
